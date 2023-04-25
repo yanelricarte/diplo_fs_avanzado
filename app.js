@@ -1,9 +1,14 @@
 const express = require("express");
-
+const hbs = require ('hbs');
 const app = express();
 const port = 3000;
 
 
+
+//Handlebars
+
+app.set('view engine', 'hbs')
+hbs.registerPartials(__dirname + "/views/partials")
 
 
 //Configurar Express para procesar datos en formato JSON
@@ -18,15 +23,21 @@ app.use(express.static("public"))
 
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname +"/views/index.html")
+  res.render('home',{
+    nombre: 'Cosme Fulanito',
+    titulo: 'UTN FULL STACK'
+  })
 });
 
 app.get("/generic", (req, res) => {
-  res.sendFile(__dirname +"/public/generic.html")
+  res.render('generic',{
+    nombre: 'Cosme Fulanito',
+    titulo: 'UTN FULL STACK '
+  })
 });
 
 app.get("/elements", (req, res) => {
-  res.sendFile(__dirname +"/public/elements.html")
+  res.render('elements')
 });
 
 
