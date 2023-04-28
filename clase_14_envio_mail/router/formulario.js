@@ -24,8 +24,8 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: 'arlene.hudson@ethereal.email',
-        pass: 'NHpyhhhCdMxXrwNAcY'
+        user: 'aurelie.spinka@ethereal.email',
+        pass: 'Yra7s7WAfQ6V6UYq4s'
     }
 });
 
@@ -45,7 +45,9 @@ const mailOptions = {
 try{
     //Enviar correo electrónico
     await transporter.sendMail(mailOptions);
-    res.render('confirmacion');
+    res.render('confirmacion',{
+        nombre: req.body.nombre
+    });
 } catch (error){
     console.log(error);
     res.render('formulario', { error: 'Error al enviar mensaje'});
