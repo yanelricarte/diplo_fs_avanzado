@@ -1,0 +1,19 @@
+{
+  "name": "clase_16_sesiones",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
+    "mongodb": "^5.5.0",
+    "mysql2": "^3.3.0"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Movies </title>
+</head>
+<body>
+    
+    <h2> Search Movies </h2>
+    <form action="/movies/search" method="GET">
+    <input type="text" name="term" placeholder="Buscar por nombre">
+    <button type="submit"> Buscar </button>
+    </form>
+
+
+<h1> Popular Movies </h1>
+
+<ul>
+{{#each movies}}
+<li>
+    <h2> {{title}}</h2>
+    <p> {{overview}}</p>
+    <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}}">
+</li>
+{{/each}}
+</ul>
+</body>
+</html>
