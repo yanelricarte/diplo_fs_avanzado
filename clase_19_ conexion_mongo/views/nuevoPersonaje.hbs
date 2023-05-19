@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear nuevo personaje</title>
+</head>
+
+<body>
+    <h1>Crear nuevo personaje</h1>
+
+    <form action="/personajes" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br>
+        
+        <label for="casa">Casa:</label>
+        <input type="text" name="casa" required><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" required></textarea><br>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+
+</html>

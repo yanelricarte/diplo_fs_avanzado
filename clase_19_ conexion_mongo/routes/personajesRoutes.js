@@ -16,5 +16,24 @@ router.get('/', async (req, res) =>{
     }
 });
 
+router.get('/crear', (req, res) =>{
+    res.render('nuevoPersonaje');
+});
+
+router.post('/', async(req, res) =>{
+    try{
+        const db = client.db('escuela');
+        const collection = db.collection(collectionName);
+        const nuevoPersonaje = req.body;
+
+        await collection.insertOne(nuevoPersonaje);
+        res.redirect('/personajes');
+    } catch(error){
+        console.error('Error al insertar el personajes', error);
+        res.status(500).json({ error: 'Error al insertar los personajes'});
+
+    }
+} )
+
 
 module.exports = router;

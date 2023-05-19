@@ -1,11 +1,11 @@
-const express = require ("express");
+const express = require("express");
 const hbs = require("hbs");
-const movieRoutes = require('./routes/movieRoutes');
-const configureSession = require ("./routes/sessions");
+const movieRoutes = require("./routes/movieRoutes");
+const configureSession = require("./routes/sessions");
 const sessionRoutes = require("./routes/routes");
 const personajesRoutes = require("./routes/personajesRoutes");
 
-const { connect } = require ("./db");
+const { connect } = require("./db");
 
 const port = 5002;
 
@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "hbs");
-hbs.registerPartials(__dirname + "/views/partials/")
+hbs.registerPartials(__dirname + "/views/partials/");
 
 // MIDDLEWARES
 app.use(express.json());
@@ -25,17 +25,14 @@ configureSession(app);
 
 connect();
 
-
 // Ruta para api peliculas
-app.use ('/movies', movieRoutes );
+app.use("/movies", movieRoutes);
 //Ruta sesiones
-app.use ('/', sessionRoutes );
+app.use("/", sessionRoutes);
 //Ruta mongodb
 
-app.use('/personajes', personajesRoutes)
-
-
+app.use("/personajes", personajesRoutes);
 
 app.listen(port, () => {
-    console.log(`Usando el puerto http://localhost:${port}`);
+  console.log(`Usando el puerto http://localhost:${port}`);
 });
