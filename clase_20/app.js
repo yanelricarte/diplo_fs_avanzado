@@ -4,7 +4,7 @@ const admin = require("firebase-admin");
 const hbs = require("hbs");
 const port = 3000;
 
-const serviceAccount = require("./crud-cloud-c1dde-firebase-adminsdk-6s93b-dde2666500.json");
+const serviceAccount = require("./...");
 
 const app = express();
 
