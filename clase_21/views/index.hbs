@@ -1,0 +1,13 @@
+{{> header }}
+
+{{!-- Contenido espeífico de la página de formulario --}}
+<h1> {{title }} </h1>
+<form action="/repositories" method="get">
+    <label for="owner"> Nombre de usuario: </label>
+    <input type="text" id="owner" name="owner" required>
+    <label for="repo"> Nombre del repositorio: </label>
+    <input type="text" id="repo" name="repo" required>
+    <button type="submit"> Obtener detalles del repositorio
+    </button>
+</form>
+{{> footer}}

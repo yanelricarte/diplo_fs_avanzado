@@ -1,0 +1,78 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* Estilos para el encabezado */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+    }
+    
+    header h1 {
+        margin: 0;
+    }
+    
+    /* Estilos para el menú de navegación */
+    nav {
+        background-color: #222;
+        padding: 10px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline-block;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+    }
+    
+    nav ul li a:hover {
+        background-color: #555;
+    }
+    
+    /* Estilos para el contenido principal */
+    main {
+        background-color: #fff;
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #333;
+    }
+    
+    p {
+        color: #666;
+        line-height: 1.5;
+    }
+    
+    /* Estilos para los enlaces */
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    

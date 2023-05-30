@@ -4,12 +4,12 @@ const admin = require("firebase-admin");
 const hbs = require("hbs");
 const port = 3000;
 
-const serviceAccount = require("./...");
+const serviceAccount = require("./archivo.json"); // el archivo de credenciales de firebase
 
 const app = express();
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert(serviceAccount),
 });
 
 
